@@ -10,10 +10,8 @@ class DescriptionCard extends StatefulWidget {
 class _DescriptionCardState extends State<DescriptionCard> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
+    return Container(
 
-      ),
     );
   }
 }

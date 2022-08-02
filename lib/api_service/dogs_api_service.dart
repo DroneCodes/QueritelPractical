@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:developer';
 
 import 'package:http/http.dart' as http;
@@ -10,8 +11,10 @@ class DogApiService {
       var url = Uri.parse(DogsApiConstants.baseUrl + DogsApiConstants.catsEndpoint);
       var response = await http.get(url);
       if (response.statusCode == 200) {
-        List<DogsModel> _dogsmodel = catsModelFromJson(response.body);
-        return _dogsmodel;
+        List<DogsModel> dogsmodel = dogsModelFromJson(
+          jsonDecode(response.body)
+        );
+        return dogsmodel;
       }
     } catch (e) {
       log(e.toString());

@@ -28,9 +28,8 @@ class _DogsPageState extends State<DogsPage> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Padding(
+    return Scaffold(
+        body: Container(
           padding: const EdgeInsets.only(
             left: 40,
             right: 40,
@@ -39,8 +38,8 @@ class _DogsPageState extends State<DogsPage> {
             child: CircularProgressIndicator(),
           )
               : GridView.builder(
-              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                maxCrossAxisExtent: 200,
+                gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+                maxCrossAxisExtent: 280,
                 childAspectRatio: 3 / 2,
                 crossAxisSpacing: 20,
                 mainAxisSpacing: 20,
@@ -50,7 +49,6 @@ class _DogsPageState extends State<DogsPage> {
                 return AnimalCard(name: dogsmodel![index].name, photo: dogsmodel![index].photo);
               }),
         ),
-      ),
     );
   }
 }

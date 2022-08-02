@@ -36,11 +36,14 @@ class _MainPageState extends State<MainPage> {
                 ],
               ),
             ),
-            body: const TabBarView(
-              children: [
-                CatsPage(),
-                DogsPage(),
-              ],
+            body: const Padding(
+              padding:  EdgeInsets.only(top: 40),
+              child: TabBarView(
+                children: [
+                  CatsPage(),
+                  DogsPage(),
+                ],
+              ),
             ),
           ),
     );

@@ -39,7 +39,7 @@ class _CatsPageState extends State<CatsPage> {
           )
               : GridView.builder(
               gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
-                maxCrossAxisExtent: 280,
+                maxCrossAxisExtent: 200,
                 childAspectRatio: 3 / 2,
                 crossAxisSpacing: 20,
                 mainAxisSpacing: 20,
@@ -53,3 +53,5 @@ class _CatsPageState extends State<CatsPage> {
     );
   }
 }
+
+

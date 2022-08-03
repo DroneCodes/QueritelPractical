@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:queritel_practical/screens/cats.dart';
 import 'package:queritel_practical/screens/cats_description_screen.dart';
 import 'package:queritel_practical/widgets/description_card.dart';
 
@@ -33,7 +34,7 @@ class AnimalCard extends StatelessWidget {
             ),
           ],
         ),
-        height: 400,
+        height: 370,
       ),
     );
   }

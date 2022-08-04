@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:queritel_practical/api_service/dogs_api_service.dart';
 import 'package:queritel_practical/model/dogs_model.dart';
-import 'package:queritel_practical/widgets/animal_card.dart';
+import 'package:queritel_practical/widgets/cat_animal_card.dart';
+import 'package:queritel_practical/widgets/dog_animal_card.dart';
 
 
 class DogsPage extends StatefulWidget {
@@ -46,7 +47,7 @@ class _DogsPageState extends State<DogsPage> {
               ),
               itemCount: dogsmodel!.length,
               itemBuilder: (BuildContext context, int index) {
-                return AnimalCard(name: dogsmodel![index].name, photo: dogsmodel![index].photo);
+                return DogAnimalCard(dog: dogsmodel![index]);
               }),
         ),
     );

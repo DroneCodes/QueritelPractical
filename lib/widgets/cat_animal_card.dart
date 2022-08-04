@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:queritel_practical/screens/cats.dart';
-import 'package:queritel_practical/screens/cats_description_screen.dart';
-import 'package:queritel_practical/widgets/description_card.dart';
+import 'package:queritel_practical/model/cats_model.dart';
+import 'package:queritel_practical/widgets/cat_description_card.dart';
 
-class AnimalCard extends StatelessWidget {
-  String name;
-  String photo;
+class CatAnimalCard extends StatelessWidget {
+  CatsModel cat;
 
-  AnimalCard({Key? key, required this.name, required this.photo})
+  CatAnimalCard({Key? key, required this.cat})
       : super(key: key);
 
   @override
@@ -15,7 +13,7 @@ class AnimalCard extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return DescriptionScreen();
+          return CatDescriptionCard(cat: cat);
         }));
       },
       child: Container(
@@ -23,13 +21,13 @@ class AnimalCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Expanded(
-              child: Image.network(photo),
+              child: Image.network(cat.photo),
             ),
             const SizedBox(
               height: 10,
             ),
             Text(
-              name,
+              cat.name,
               style: const TextStyle(color: Colors.black),
             ),
           ],

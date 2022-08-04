@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:queritel_practical/api_service/cats_api_service.dart';
 import 'package:queritel_practical/model/cats_model.dart';
-import 'package:queritel_practical/widgets/animal_card.dart';
+import 'package:queritel_practical/widgets/cat_animal_card.dart';
 
 class CatsPage extends StatefulWidget {
   const CatsPage({Key? key}) : super(key: key);
@@ -46,7 +46,7 @@ class _CatsPageState extends State<CatsPage> {
               ),
               itemCount: catsmodel!.length,
               itemBuilder: (BuildContext context, int index) {
-                return AnimalCard(name: catsmodel![index].name, photo: catsmodel![index].photo);
+                return CatAnimalCard(cat: catsmodel![index]);
               }),
         ),
       ),

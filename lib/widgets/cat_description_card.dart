@@ -24,7 +24,6 @@ class DescriptionCard extends StatelessWidget {
               width: 10,
             ),
             SizedBox(
-              width: 100,
               child: Column(
                 children: [
                   Text(
